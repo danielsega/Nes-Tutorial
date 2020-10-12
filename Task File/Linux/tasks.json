@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "args": [
+        "cd ~"
+    ],
+    "tasks": [
+        {
+            "label": "Compile Background",
+            "problemMatcher": {
+                "owner": "6502",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            },
+            "command": [
+                "/usr/local/bin/nesasm"
+            ],
+            "args": [
+                "background.asm"
+            ]
+        },
+        {
+            "label": "Run background in Emulator",
+            "command": [
+                "/usr/bin/fceux"
+            ],
+            "args": [
+                "background.nes"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
