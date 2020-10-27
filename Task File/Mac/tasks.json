@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "args": [
+        "cd ~"
+    ],
+    "tasks": [
+        {
+            "label": "Compile Background File :)",
+            "problemMatcher": {
+                "owner": "6502",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            },
+            "command": [
+                "/Users/danielsega/Documents/NESASM/nesasm"
+            ],
+            "args": ["background.asm"]
+        },
+        {
+            "label": "Run in Emulator",
+            "command":["Example/Emulator"],
+            "args": [
+                "background.nes"
+            ]
+        }
+    ]
+}
