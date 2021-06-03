@@ -25,7 +25,7 @@
                 "C:/Emulator/Nintendo/Mesen/Mesen.exe"
             ],
             "args": [
-                "${file}"
+                "${fileBasenameNoExtension}.nes"
             ],
             "problemMatcher": [],
             "dependsOn": []
