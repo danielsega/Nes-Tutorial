@@ -23,13 +23,13 @@
             "command": [
                 "/Users/danielsega/Documents/NESASM/nesasm"
             ],
-            "args": ["background.asm"]
+            "args": ["${file}"]
         },
         {
             "label": "Run in Emulator",
             "command":["Example/Emulator"],
             "args": [
-                "background.nes"
+                "${fileBasenameNoExtension}.nes"
             ]
         }
     ]
