@@ -3,35 +3,32 @@
     "command": "cmd",
     "echoCommand": true,
     "args": [
-        "cd /"
+        "/C"
     ],
     "tasks": [
         {
             "label": "Compile Code",
-            "problemMatcher": {
-                "owner": "6502",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceRoot}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "severity": 3,
-                    "message": 4
-                }
-            },
+            "command": [
+                //Put Your NESASM3 or your favorite Assembler Path Here
+                "C:/Temp/nesasm3.exe"
+            ],
             "args": [
-                "C:/Temp/nesasm3.exe background.asm"
-            ]
+                "${file}"
+            ],
+            "dependsOn": [],
+            "problemMatcher": []
         },
         {
             "label": "Run Emulator",
-            "args": [
-                "C:/Emulator/Nintendo/fceux-2.2.3/fceux.exe background.nes"
+            "command": [
+                //Put Your Emualtor Path Here
+                "C:/Emulator/Nintendo/Mesen/Mesen.exe"
             ],
-            "problemMatcher": []
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "dependsOn": []
         }
     ]
 }
