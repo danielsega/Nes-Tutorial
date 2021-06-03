@@ -24,7 +24,7 @@
                 "/usr/local/bin/nesasm"
             ],
             "args": [
-                "background.asm"
+                "${file}"
             ]
         },
         {
@@ -33,7 +33,7 @@
                 "/usr/bin/fceux"
             ],
             "args": [
-                "background.nes"
+                "${fileBasenameNoExtension}.nes"
             ],
             "problemMatcher": []
         }
